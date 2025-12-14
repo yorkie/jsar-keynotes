@@ -1,57 +1,33 @@
-# React + TypeScript + Vite
+# JSAR Keynotes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository continuously publishes JSAR’s latest thinking, design, and progress in the form of Keynotes. It serves both internal stakeholders and the community to align on milestones, decisions, and practical learnings.
 
-Currently, two official plugins are available:
+**Official Website**: https://m-creativelab.github.io/jsar-runtime/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+- Stack: `React` + `TypeScript` + `Vite`
+- Purpose: present JSAR evolution as demoable, readable Keynotes
+- Cadence: milestone-based updates with full history retained
 
-## Expanding the ESLint configuration
+## View Locally
+- Install dependencies: `npm install`
+- Start dev server: `npm run dev`
+- Build for production: `npm run build`
+- Preview build: `npm run preview`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Content Structure
+- Each Keynote captures a phase-aligned snapshot: topic, problem, approach, conclusion
+- Pages and components structure the content for reuse and presentation
+- Versioned history preserves context across iterations
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Release & Updates
+- Automated build and deploy via CI/CD (see `.github/workflows`)
+- Pushes to `main` trigger preview updates to keep content in sync
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contributing
+- Add or revise Keynotes using consistent structure and terminology
+- Before submitting, run: `npm run lint` and `npm run check`
+- In PRs, include background and impact scope to aid review
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## License
+- Content follows the project’s license. For external references, clearly attribute source and authorization in the relevant pages.
