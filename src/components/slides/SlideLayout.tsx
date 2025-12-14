@@ -40,12 +40,10 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
   }, [navigate, nextPath, prevPath]);
 
   return (
-    <div className="min-h-screen bg-[#1a1a2e] text-white overflow-hidden relative font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-[#0b0c14] to-[#151725] text-white overflow-hidden relative font-sans">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20" />
-        <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[100px]" />
-        <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(100%_60%_at_50%_0%,rgba(99,102,241,0.12)_0%,transparent_60%)]" />
       </div>
 
       {/* Header */}
@@ -60,7 +58,7 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
       </header>
 
       {/* Main Content */}
-      <main className={`relative z-0 h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-16 ${className}`}>
+      <main className={`relative z-0 h-screen flex flex-col justify-center px-10 md:px-20 lg:px-28 pt-12 ${className}`}>
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
@@ -75,7 +73,7 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                className="text-center -mt-4 text-4xl md:text-6xl font-semibold tracking-tight mb-10 bg-gradient-to-r from-[#8ab4ff] to-[#c3a5ff] bg-clip-text text-transparent"
               >
                 {title}
               </motion.h2>

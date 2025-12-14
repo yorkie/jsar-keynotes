@@ -56,20 +56,20 @@ const SlideMethodology: React.FC = () => {
             <div className="w-20 h-20 mx-auto bg-purple-500/20 rounded-full flex items-center justify-center mb-6 text-purple-400">
               <BoxSelect size={40} />
             </div>
-            <h3 className="text-2xl font-bold mb-4">空间现实假设</h3>
-            <p className="text-gray-300 mb-6">在空间环境中，任何 2D 元素只是不能修改 z 值的 3D 元素</p>
+            <h3 className="text-2xl font-bold mb-4">Spatial Reality Assumption</h3>
+            <p className="text-gray-300 mb-6">In spatial environments, any 2D element is a 3D element that cannot modify its z coordinate</p>
             <ul className="text-left space-y-3 text-sm text-gray-400">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-purple-400 rounded-full" />
-                原生空间属性支持
+                Native spatial properties support
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-purple-400 rounded-full" />
-                支持单目与双目立体渲染
+                Support for monocular and stereoscopic rendering
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-purple-400 rounded-full" />
-                适应不同显示设备 (VR/AR/Desktop)
+                Adapt to diverse displays (VR/AR/Desktop)
               </li>
             </ul>
           </div>
